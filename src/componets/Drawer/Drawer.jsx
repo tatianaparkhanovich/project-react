@@ -1,6 +1,4 @@
 import React from "react";
-//import * as React from "react";
-import "./Drawer.css";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
@@ -11,7 +9,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Transaction from "../Transaction/Transaction";
-//import ListItemIcon from "@mui/material/ListItemIcon";
 import statChartImg from "../../assets/stat-chart.png";
 
 export default function TemporaryDrawer() {

@@ -1,4 +1,5 @@
 import administrationImg from "../../assets/default-avatar.svg";
+
 export const Administration = () => {
     return (
         <div className="header-administration">

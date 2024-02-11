@@ -22,13 +22,11 @@ export const userReducer = (state = initialState, action) => {
       };
     case SET_USERS:
       return { ...state, users: action.payload };
-    //УСТАНОВИТЬ ТЕКУЩУЮ СТРАНИЦУ
     case SET_CURRENT_PAGE:
       return {
         ...state,
         currentPage: action.payload,
       };
-    //ВСЕГО СТРАНИЦ
     case SET_TOTAL_PAGES:
       return {
         ...state,
@@ -50,7 +48,7 @@ export const userReducer = (state = initialState, action) => {
       return state;
   }
 };
-//УСТАНОВИТЬ ТЕКУЩУЮ СТРАНИЦУ
+
 export const setCurrentPage = (page) => ({
   type: SET_CURRENT_PAGE,
   payload: page

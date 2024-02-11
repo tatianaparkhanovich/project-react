@@ -8,7 +8,6 @@ import { Form } from './componets/Form';
 import { Header } from './componets/Header/Header';
 import { useSelector } from "react-redux";
 import { SET_TOTAL_PAGES } from "./store/userReducer";
-//import { Drawer } from "./componets/Drawer/Drawer";
 import  TemporaryDrawer  from "./componets/Drawer/Drawer";
 
 
@@ -16,7 +15,6 @@ function App() {
   const dispatch = useDispatch();
 
   const [appState, setAppState] = useState(false);
-
   const currentPage = useSelector((state) => state.users.currentPage);
   const setSearch = useSelector((state) => state.users.search);
   const orderBy = useSelector((state) => state.users.orderBy);
