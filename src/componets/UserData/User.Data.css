@@ -1,0 +1,17 @@
+.pages {
+    padding-top: 24px;
+    padding-bottom: 45px;
+}
+.page, .current-page{
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #FFFFFF;
+  }
+  .pages :hover{
+    background-color: #1C64F2;
+  }
+  .current-page {
+    color:  gray;
+  }

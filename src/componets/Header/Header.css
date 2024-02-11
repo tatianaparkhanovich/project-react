@@ -1,0 +1,47 @@
+.header{
+    padding: 34px 0 34px;
+    background:#121825 ;
+    width: 100%;
+}
+.header-row{
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 44px;
+}
+.header-logo{
+color: #FFF;
+font-family: "IBM Plex Sans";
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 29px; 
+}
+.header-organization{
+    display: flex;
+    text-align: center;
+    gap:10px;
+    flex-grow: 1;
+}
+.header-administration{
+    display: flex;
+    justify-content: end;
+    text-align: center;
+    gap:12px;
+}
+h1{
+font-size: 14px;
+font-style: normal; 
+}
+h2{
+color: var(--darktheme-base-white, #FFF);
+font-family: "IBM Plex Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 18px;   
+}
+.span{
+    color: gray;
+    display: flex;
+}
