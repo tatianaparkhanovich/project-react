@@ -24,10 +24,10 @@ export const Person = ({ person, index }) => {
       <tr onClick={() => handleCurentId(person.id)} key={person.id}>
         <td contentEditable={isEdit}>{person.email}</td>
         <td contentEditable={isEdit}>{person.name}</td>
-        <td contentEditable={isEdit}>{person.role}</td>
-        <td contentEditable={isEdit}>{person.subscription.plan.type}</td>
-        <td contentEditable={isEdit}>{person.subscription.tokens} TKN </td>
-        <td>
+        <td  className="t" contentEditable={isEdit}>{person.role}</td>
+        <td className="t" contentEditable={isEdit}>{person.subscription.plan.type}</td>
+        <td className="t" contentEditable={isEdit}>{person.subscription.tokens} TKN </td>
+        <td className="t">
           {person.actions}
           <button onClick={() => handleTextСhange()}>
             <img src={editImg} />

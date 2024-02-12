@@ -40,7 +40,7 @@ export default function TemporaryDrawer() {
     <Box
       style={{
         fontSize: "11px",
-        width: "470px",
+        width: "375px",
         paddingTop: "56px",
         paddingLeft: "20px",
         paddingRight: "10px",

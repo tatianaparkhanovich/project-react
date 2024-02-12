@@ -45,3 +45,15 @@ line-height: 18px;
     color: gray;
     display: flex;
 }
+@media (max-width: 560px) {
+.header-administration{
+  flex:none;
+}
+h2{
+  font-size: 9px;
+  
+}
+.header-logo{
+    font-size: 18px;
+}
+}

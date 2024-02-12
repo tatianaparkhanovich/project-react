@@ -21,12 +21,12 @@ const UserData = ({ orderBy }) => {
           <tr>
             <th>Email</th>
             <th>Имя</th>
-            <th>Poль</th>
-            <th>Подписка</th>
-            <th onClick={() => dispatch(setSortTokens(!orderBy))}>
+            <th className="t">Poль</th>
+            <th className="t">Подписка</th>
+            <th  className="t" onClick={() => dispatch(setSortTokens(!orderBy))}>
               Токены <img className="th" src={img} />
             </th>
-            <th>Действия</th>
+            <th className="t">Действия</th>
           </tr>
         </thead>
         <tbody>

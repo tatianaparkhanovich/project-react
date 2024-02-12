@@ -37,7 +37,7 @@ input{
 td{
   border-bottom: solid 1px #1C64F2;
   padding: 10px;
-  color: #FFF;
+  color: #FFF; 
 }
 .th{
    position: absolute;
@@ -48,7 +48,6 @@ border-bottom:  solid 1px black;
 padding: 10px;
 color: var(--darktheme-Gray-scale-Gray-6, #9CA3AF);
 text-align: center;
-
 font-family: "IBM Plex Sans";
 font-size: 12px;
 font-weight: 500;
@@ -70,17 +69,39 @@ tr{
   top: 0;
   right: 0;
 }
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p{
+  text-align: left;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 940px) {
+  tbody {
+font-size: 10px;
   }
+  .input {
+    width: 80%;
+}
+}
+@media (max-width: 649px) {
+.input {
+    width: 100%;
+}
+}
+@media (max-width: 560px) {
+.input {
+    width: 100%;
+}
+.t{
+  display: none;
+}
+  tbody {
+font-size: 8px;
+  }
+.h2{
+  display: none;
+}
+.header-administration span .span{
+  flex: none;
+}
+.header-administration span {
+  display: none;
+}
 }
