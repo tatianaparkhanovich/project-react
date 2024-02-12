@@ -1,9 +1,11 @@
-import { useDispatch } from "react-redux";
-import { setCurrentPage } from "../../store/userReducer";
+import { useDispatch,useSelector } from "react-redux";
+import { SET_CURRENT_PAGE } from "../../store/userReducer";
 import imgLeft from "../../assets/arrow-narrow-left.svg";
 import imgRight from "../../assets/arrow-narrow-right.svg";
 
+
 export const Pagination = ({ pages }) => {
+  const currentPage = useSelector((state) => state.users.currentPage);
   const dispatch = useDispatch();
 
   const newPages = [];
@@ -19,8 +21,13 @@ export const Pagination = ({ pages }) => {
       {newPages.map((page, index) => (
         <button
           key={index}
-          className={setCurrentPage == page ? "current-page" : "page"}
-          onClick={() => dispatch(setCurrentPage(page))}
+          className={currentPage == page ? "current-page" : "page"}
+          onClick={() =>
+            dispatch({
+              type: SET_CURRENT_PAGE,
+              payload: page,
+            })
+          }
         >
           {page}
         </button>

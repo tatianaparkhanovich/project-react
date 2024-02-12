@@ -49,12 +49,4 @@ export const userReducer = (state = initialState, action) => {
   }
 };
 
-export const setCurrentPage = (page) => ({
-  type: SET_CURRENT_PAGE,
-  payload: page
-});
- export const setSortTokens = (orderBy) => ({
-   type: SET_SORT_TOKENS,
-   payload: orderBy,
- });
 

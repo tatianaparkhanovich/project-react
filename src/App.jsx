@@ -16,7 +16,7 @@ function App() {
 
   const [appState, setAppState] = useState(false);
   const currentPage = useSelector((state) => state.users.currentPage);
-  const setSearch = useSelector((state) => state.users.search);
+  const search = useSelector((state) => state.users.search);
   const orderBy = useSelector((state) => state.users.orderBy);
   
 useEffect(() => {
@@ -27,8 +27,8 @@ useEffect(() => {
   } else {
     apiUrl += `&orderBy=tokens:desc`;
   } 
-    if (setSearch != "" && setSearch != undefined) {
-    apiUrl += `&search=${setSearch}`;
+    if (search != "" && search != undefined) {
+    apiUrl += `&search=${search}`;
     }
     axios.get(apiUrl).then((resp) => {
       const allPersons = resp.data.data;
@@ -37,7 +37,7 @@ useEffect(() => {
       dispatch({ type: SET_USERS, payload: allPersons });
       dispatch({ type: SET_TOTAL_PAGES, payload: pages });
     });
-}, [setSearch, currentPage, orderBy]
+}, [search, currentPage, orderBy]
 );
 
   return (

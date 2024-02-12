@@ -4,7 +4,7 @@ import "./User.Data.css";
 import { Person } from "../Person";
 import img from "../../assets/arrow-narrow-down.svg";
 import Pagination from "../Pagination/Pagination";
-import { setSortTokens } from "../../store/userReducer";
+import { SET_SORT_TOKENS } from "../../store/userReducer";
 
 const UserData = ({ orderBy }) => {
   const persons = useSelector((state) => state.users.users);
@@ -23,7 +23,15 @@ const UserData = ({ orderBy }) => {
             <th>Имя</th>
             <th className="t">Poль</th>
             <th className="t">Подписка</th>
-            <th  className="t" onClick={() => dispatch(setSortTokens(!orderBy))}>
+            <th
+              className="t"
+              onClick={() =>
+                dispatch({
+                  type: SET_SORT_TOKENS,
+                  payload: !orderBy,
+                })
+              }
+            >
               Токены <img className="th" src={img} />
             </th>
             <th className="t">Действия</th>
